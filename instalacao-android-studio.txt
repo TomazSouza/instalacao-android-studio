@@ -1,0 +1,65 @@
+
+
+	Instalação completa do Android Studio no Linux Mint
+       
+     1 - Instalar JDK versão 11
+	 
+		- sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+		- wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
+		- sudo apt update
+		- sudo apt install adoptopenjdk-11-hotspot
+	
+	 2 - Baixar o Android Studio
+	
+	 3 - Descompactar o Android Studio
+	 
+		- Pelo terminal: tar -vzxf nomedoarquivo.tar.gz
+	
+	 4 - Mover para o diretório /opt
+	 
+		- diretório raiz do sistema "/"
+		- sudo mv android-studio /opt
+	
+	 5 - Configurar o atalho:
+        
+        nome do arquivo: android-studio.desktop
+		
+        conteúdo:
+
+		    [Desktop Entry]
+		    Name=Android Studio
+		    Type=Application
+		    Exec=/opt/android-studio/bin/studio.sh
+		    Terminal=false
+		    Icon=/opt/android-studio/bin/studio.svg
+		    Comment=Integrated Development Environment
+		    NoDisplay=false
+		    Categories=Application;Development;
+		    Name[en]=Android Studio
+
+      6 - Configurar o SDK no IDE Android Studio
+	
+      7 - Configurar variáveis de ambiente
+
+        - arquivo ~/.bashrc 
+	
+	 - Para quer sever essa configuração ?
+	
+	 - Para ter acesso ao recursos do SDK, por exemplo o adb que serve para
+       enviar comandos ao smartphone ou emulador por meio do terminal que 
+       está incorporado na IDE Android Studio ou até mesmo pelo próprio terminal 
+       fora do Android Studio
+
+        export ANDROID_HOME=$HOME/Android/Sdk
+        export PATH=$PATH:$ANDROID_HOME/emulator
+        export PATH=$PATH:$ANDROID_HOME/tools
+        export PATH=$PATH:$ANDROID_HOME/tools/bin
+        export PATH=$PATH:$ANDROID_HOME/platform-tools
+        export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+
+        export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+        export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+        export PATH=$PATH:$ANDROID_SDK_ROOT/tools
+        export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
+        export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+        export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin
