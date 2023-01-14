@@ -26,16 +26,16 @@
 		
         conteúdo:
 
-		    [Desktop Entry]
-		    Name=Android Studio
-		    Type=Application
-		    Exec=/opt/android-studio/bin/studio.sh
-		    Terminal=false
-		    Icon=/opt/android-studio/bin/studio.svg
-		    Comment=Integrated Development Environment
-		    NoDisplay=false
-		    Categories=Application;Development;
-		    Name[en]=Android Studio
+[Desktop Entry]
+Name=Android Studio
+Type=Application
+Exec=/opt/android-studio/bin/studio.sh
+Terminal=false
+Icon=/opt/android-studio/bin/studio.svg
+Comment=Integrated Development Environment
+NoDisplay=false
+Categories=Application;Development;
+Name[en]=Android Studio
 
       6 - Configurar o SDK no IDE Android Studio
 	
@@ -49,17 +49,17 @@
        enviar comandos ao smartphone ou emulador por meio do terminal que 
        está incorporado na IDE Android Studio ou até mesmo pelo próprio terminal 
        fora do Android Studio
+       
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 
-        export ANDROID_HOME=$HOME/Android/Sdk
-        export PATH=$PATH:$ANDROID_HOME/emulator
-        export PATH=$PATH:$ANDROID_HOME/tools
-        export PATH=$PATH:$ANDROID_HOME/tools/bin
-        export PATH=$PATH:$ANDROID_HOME/platform-tools
-        export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
-
-        export ANDROID_SDK_ROOT=$HOME/Android/Sdk
-        export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
-        export PATH=$PATH:$ANDROID_SDK_ROOT/tools
-        export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
-        export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
-        export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin
+export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/tools
+export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin
